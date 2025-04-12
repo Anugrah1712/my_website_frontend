@@ -5,9 +5,14 @@ import Home from "./pages/Home";
 import Resume from "./pages/Resume";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
+import Stats from './pages/Stats';
 import Contact from "./pages/Contact";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+// import { Chatbot } from '@anugrah17/rag-chatbot-widget';
+// import '@anugrah17/rag-chatbot-widget/chatbot-widget.css';
+
+import "./App.css";
 
 function App() {
   return (
@@ -19,8 +24,10 @@ function App() {
         <Route path="/resume" element={<Resume />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/stats" element={<Stats />} />
       </Routes>
-      <Footer />  {/* ✅ Added Footer Here */}
+      {/* <Chatbot /> */}
+      <Footer />  
     </Router>
   );
 }

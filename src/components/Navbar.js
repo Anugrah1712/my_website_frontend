@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 const Nav = styled.nav`
   display: flex;
+  background: linear-gradient(to right,rgb(255, 255, 255), #a1c4fd);
   justify-content: space-between;
   padding: 20px 100px;
   border-bottom: 1px solid #ddd;

@@ -3,12 +3,13 @@ import React from "react";
 import styled from "styled-components";
 import profilePic from "../assets/image.png";
 
+
 const SidebarContainer = styled.div`
   width: 25%;
   height: 50%;
   padding: 20px;
-  background: white;
-  font-size: 25px;
+  background: white
+  font-size: 20px;
   border-radius: 10px;
   box-shadow: 25px 25px 10px rgba(0, 0, 0, 0.1);
   margin: 0;
@@ -23,6 +24,29 @@ const ProfileImage = styled.img`
   margin-bottom: 15px;
 `;
 
+const StyledName = styled.h2`
+  color: black;
+  margin: 10px 0;
+`;
+
+const StyledEmail = styled.p`
+  color: black;
+  font-size: 20px;
+  margin-bottom: 20px;
+`;
+
+const StyledHeading = styled.h3`
+  color: black;
+  margin-top: 20px;
+  font-size:22px;
+`;
+
+const StyledParagraph = styled.p`
+  color: black;
+  font-size: 20px;
+  line-height: 1.5;
+`;
+
 const Button = styled.button`
   background: #007bff;
   color: white;
@@ -34,19 +58,21 @@ const Button = styled.button`
   margin-top: 10px;
 `;
 
+
 const Sidebar = () => {
   return (
     <SidebarContainer>
       <ProfileImage src={profilePic} alt="Profile" />
-      <h2>Anugrah Mishra</h2>
-      <p>anugrahmishra15@gmail.com</p>
-      <h3>ABOUT</h3>
-      <p>
+      <StyledName>Anugrah Mishra</StyledName>
+      <StyledEmail>anugrahmishra15@gmail.com</StyledEmail>
+      <StyledHeading>ABOUT</StyledHeading>
+        <StyledParagraph>
         Hi, I'm Anugrah. I'm a Computer Science and AIML major at Symbiosis Institute of Technology and currently a Data Science Intern at Bajaj Finserv. 
         I bring a strong foundation in software development and AI/ML, with experience spanning Android, Python, and full-stack technologies.
-      </p>
+        </StyledParagraph>
       <Button>LEARN MORE</Button>
     </SidebarContainer>
+
   );
 };
 

@@ -6,7 +6,8 @@ const ResumeContainer = styled.div`
   display: flex;
   min-height: 100vh;
   padding: 40px ;
-  background-color: #eeeeee;
+  background: linear-gradient(to right,rgb(255, 255, 255), #a1c4fd);
+  animation: fadeIn 0.6s ease-in-out;
 `;
 
 const Header = styled.div`

@@ -2,13 +2,17 @@
 import React from "react";
 import styled from "styled-components";
 import Sidebar from "../components/Sidebar"; // Import the shared sidebar
+// import { Chatbot } from '@anugrah17/rag-chatbot-widget';
+// import '@anugrah17/rag-chatbot-widget/chatbot-widget.css'; // ✅ Now valid
+
 
 const HomeContainer = styled.div`
   display: flex;
   align-items: flex-start;
   min-height: 100vh;
   padding: 40px;
-  background-color: #eeeeee;
+  background: linear-gradient(to right,rgb(255, 255, 255), #a1c4fd);
+  animation: fadeIn 0.6s ease-in-out;
 `;
 
 const Content = styled.div`
@@ -61,6 +65,7 @@ function Home() {
           <p>Source available <a href="#">here</a>.</p>
         </Links>
       </Content>
+      {/* <Chatbot /> */}
     </HomeContainer>
   );
 }
