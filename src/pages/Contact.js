@@ -9,9 +9,14 @@ const ContactContainer = styled.div`
   align-items: flex-start;
   min-height: 100vh;
   padding: 40px;
-  background: linear-gradient(to right,rgb(255, 255, 255), #a1c4fd);
+  background: linear-gradient(to right, rgb(255, 255, 255), #a1c4fd);
   font-family: 'Segoe UI', sans-serif;
   animation: fadeIn 0.6s ease-in-out;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 20px;
+  }
 `;
 
 const RightColumn = styled.div`
@@ -23,6 +28,12 @@ const RightColumn = styled.div`
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
   margin-left: 50px;
   animation: fadeIn 0.6s ease-in-out;
+
+  @media (max-width: 768px) {
+    padding: 30px 20px;
+    margin-left: 0;
+    margin-top: 20px;
+  }
 `;
 
 const SectionTitle = styled.h2`
@@ -31,6 +42,10 @@ const SectionTitle = styled.h2`
   margin-bottom: 30px;
   border-bottom: 2px solid rgba(0, 0, 0, 0.1);
   padding-bottom: 12px;
+
+  @media (max-width: 768px) {
+    font-size: 22px;
+  }
 `;
 
 const SubHeading = styled.p`
@@ -38,6 +53,10 @@ const SubHeading = styled.p`
   color: #444;
   margin-bottom: 30px;
   line-height: 1.6;
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
 `;
 
 const InfoItem = styled.div`
@@ -46,12 +65,22 @@ const InfoItem = styled.div`
   margin-bottom: 20px;
   font-size: 16px;
   color: #222;
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `;
 
 const Icon = styled.div`
   font-size: 22px;
   margin-right: 15px;
   color: #007bff;
+
+  @media (max-width: 768px) {
+    margin-bottom: 5px;
+  }
 `;
 
 const Label = styled.span`
@@ -63,6 +92,12 @@ const Socials = styled.div`
   display: flex;
   gap: 20px;
   margin-top: 25px;
+
+  @media (max-width: 768px) {
+    gap: 15px;
+    justify-content: start;
+    flex-wrap: wrap;
+  }
 `;
 
 const SocialIcon = styled.a`
@@ -72,6 +107,10 @@ const SocialIcon = styled.a`
 
   &:hover {
     color: #007bff;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 20px;
   }
 `;
 
@@ -83,6 +122,11 @@ const Callout = styled.div`
   border-radius: 8px;
   margin: 30px 0;
   font-weight: 500;
+
+  @media (max-width: 768px) {
+    padding: 12px 16px;
+    font-size: 14px;
+  }
 `;
 
 const MapEmbed = styled.iframe`
@@ -91,6 +135,10 @@ const MapEmbed = styled.iframe`
   border-radius: 10px;
   width: 100%;
   height: 250px;
+
+  @media (max-width: 768px) {
+    height: 200px;
+  }
 `;
 
 const Contact = () => {

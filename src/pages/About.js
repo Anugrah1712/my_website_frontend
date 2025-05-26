@@ -7,8 +7,13 @@ const AboutContainer = styled.div`
   display: flex;
   min-height: 100vh;
   padding: 40px;
-  background: linear-gradient(to right,rgb(255, 255, 255), #a1c4fd);
+  background: linear-gradient(to right, rgb(255, 255, 255), #a1c4fd);
   animation: fadeIn 0.6s ease-in-out;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 20px;
+  }
 `;
 
 const Content = styled.div`
@@ -20,6 +25,24 @@ const Content = styled.div`
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
   margin-left: 50px;
   font-family: 'Segoe UI', sans-serif;
+
+  @media (max-width: 1024px) {
+    width: 80%;
+    margin-left: 30px;
+    padding: 30px;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-left: 0;
+    padding: 20px;
+    font-size: 18px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 16px;
+    padding: 15px;
+  }
 `;
 
 const Title = styled.h2`
@@ -29,6 +52,14 @@ const Title = styled.h2`
   margin-bottom: 20px;
   border-bottom: 3px solid #4a90e2;
   padding-bottom: 5px;
+
+  @media (max-width: 768px) {
+    font-size: 28px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 24px;
+  }
 `;
 
 const SubTitle = styled.h3`
@@ -36,6 +67,15 @@ const SubTitle = styled.h3`
   color: #333;
   margin-top: 30px;
   margin-bottom: 15px;
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+    margin-top: 25px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 18px;
+  }
 `;
 
 const Paragraph = styled.p`
@@ -43,6 +83,14 @@ const Paragraph = styled.p`
   line-height: 1.7;
   color: #444;
   margin-bottom: 20px;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 15px;
+  }
 `;
 
 const BulletList = styled.ul`
@@ -50,6 +98,10 @@ const BulletList = styled.ul`
   margin-left: 25px;
   margin-bottom: 20px;
   color: #444;
+
+  @media (max-width: 768px) {
+    margin-left: 20px;
+  }
 `;
 
 const ListItem = styled.li`
@@ -62,6 +114,11 @@ const Quote = styled.blockquote`
   color: #555;
   border-left: 5px solid #4a90e2;
   padding-left: 15px;
+
+  @media (max-width: 480px) {
+    font-size: 14px;
+    padding-left: 10px;
+  }
 `;
 
 function About() {

@@ -10,12 +10,19 @@ import CountUp from 'react-countup';
 // Styled Components
 const StatsContainer = styled.div`
   display: flex;
+  flex-direction: row;
   align-items: flex-start;
   min-height: 100vh;
   padding: 40px;
-  background: linear-gradient(to right,rgb(255, 255, 255), #a1c4fd);
+  background: linear-gradient(to right, rgb(255, 255, 255), #a1c4fd);
   animation: fadeIn 0.6s ease-in-out;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 20px;
+  }
 `;
+
 
 const RightColumn = styled.div`
   flex: 2;
@@ -26,21 +33,38 @@ const RightColumn = styled.div`
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
   margin-left: 50px;
   animation: fadeIn 0.6s ease-in-out;
-  
+
+  @media (max-width: 768px) {
+    padding: 30px 20px;
+    margin-left: 0;
+    margin-top: 20px;
+    border-radius: 12px;
+  }
 `;
+
 
 const SectionTitle = styled.h3`
   font-size: 28px;
   margin-bottom: 20px;
   border-bottom: 2px solid #eee;
   padding-bottom: 10px;
-`;
 
+  @media (max-width: 500px) {
+    font-size: 22px;
+  }
+`;
 const StatRow = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 10px 0;
   border-bottom: 1px solid #f1f1f1;
+  flex-wrap: wrap;
+
+  @media (max-width: 500px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
 `;
 
 const Label = styled.span`
@@ -86,6 +110,12 @@ const IconGrid = styled.div`
   margin-top: 20px;
   font-size: 30px;
   color: #333;
+
+  @media (max-width: 500px) {
+    gap: 12px;
+    font-size: 26px;
+    justify-content: center;
+  }
 `;
 
 // Fun Fact Box
@@ -96,6 +126,11 @@ const FunFact = styled.div`
   border-left: 4px solid #007bff;
   font-style: italic;
   color: #555;
+
+  @media (max-width: 500px) {
+    font-size: 14px;
+    padding: 15px;
+  }
 `;
 
 const Stats = () => {

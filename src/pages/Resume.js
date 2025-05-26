@@ -4,33 +4,38 @@ import Sidebar from "../components/Sidebar";
 
 const ResumeContainer = styled.div`
   display: flex;
+  flex-direction: row;
   min-height: 100vh;
-  padding: 40px ;
-  background: linear-gradient(to right,rgb(255, 255, 255), #a1c4fd);
+  padding: 40px;
+  background: linear-gradient(to right, rgb(255, 255, 255), #a1c4fd);
   animation: fadeIn 0.6s ease-in-out;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 20px;
+  }
 `;
 
+
 const Header = styled.div`
-  padding: -10px ;
-  display: flex;
-  font-size: 10px;
-  margin-top: -100px;
-  font-weight: bold;
-  text-transform: uppercase;
+  padding: 10px 0;
+  font-size: 16px;
   text-align: right;
+
+  @media (max-width: 768px) {
+    text-align: center;
+    font-size: 14px;
+  }
 `;
 
 const Nav = styled.div`
-  padding: -10px ;
   display: flex;
   gap: 20px;
-  margin-top: -100px;
-  font-size: 1px;
-  font-weight: bold;
+  font-size: 14px;
   text-transform: uppercase;
   color: black;
   cursor: pointer;
-  text-align: right
+  justify-content: flex-end;
 
   a {
     text-decoration: none;
@@ -39,6 +44,13 @@ const Nav = styled.div`
 
   a:hover {
     color: #007bff;
+  }
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 12px;
+    gap: 10px;
   }
 `;
 
@@ -51,12 +63,24 @@ const Content = styled.div`
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
   margin-left: 50px;
   font-family: 'Segoe UI', sans-serif;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-left: 0;
+    padding: 20px;
+    font-size: 16px;
+  }
 `;
+
 
 const SectionTitle = styled.h2`
   font-size: 24px;
   font-weight: bold;
   margin-top: 20px;
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
 `;
 
 const SkillBarWrapper = styled.div`
@@ -66,6 +90,11 @@ const SkillBarWrapper = styled.div`
 const SkillLabel = styled.div`
   display: flex;
   justify-content: space-between;
+  font-size: 16px;
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
 `;
 
 const SkillBar = styled.div`
@@ -74,6 +103,7 @@ const SkillBar = styled.div`
   height: 18px;
   width: 100%;
   position: relative;
+  margin-bottom: 10px;
 
   &::after {
     content: "";
