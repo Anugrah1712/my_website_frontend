@@ -128,7 +128,7 @@ function About() {
       <Content>
         <Title>About Me</Title>
         <Paragraph>
-          Hey, I’m <strong>""Anugrah Mishra</strong> — an AI/ML enthusiast, builder, and curious human who finds joy in creating meaningful tech experiences that can make lives better. Currently pursuing my B.Tech in Computer Science Engineering with a specialization in AI & ML at Symbiosis Institute of Technology, Pune (2021–2025).
+          Hey, I’m <strong>"Anugrah Mishra"</strong> — an AI/ML enthusiast, builder, and curious human who finds joy in creating meaningful tech experiences that can make lives better. Currently pursuing my B.Tech in Computer Science Engineering with a specialization in AI & ML at Symbiosis Institute of Technology, Pune (2021–2025).
         </Paragraph>
         <Paragraph>
           I'm deeply passionate about bridging the gap between research and real-world application—whether it's detecting skin diseases using deep learning, predicting plant health from images, or exploring the endless possibilities of cloud architecture. 
