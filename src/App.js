@@ -1,4 +1,4 @@
-// About.js
+// App.js
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
@@ -9,8 +9,9 @@ import Stats from './pages/Stats';
 import Contact from "./pages/Contact";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-// import { Chatbot } from '@anugrah17/rag-chatbot-widget';
-// import '@anugrah17/rag-chatbot-widget/chatbot-widget.css';
+
+// Import your Chatbot and DeveloperConsole components
+import { Chatbot } from 'rag-chatbot-ui-anuweb';// Import from npm package
 
 import "./App.css";
 
@@ -26,8 +27,8 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/stats" element={<Stats />} />
       </Routes>
-      {/* <Chatbot /> */}
       <Footer />  
+      <Chatbot />
     </Router>
   );
 }
