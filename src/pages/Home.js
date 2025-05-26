@@ -1,17 +1,14 @@
-// pages/Home.js
 import React from "react";
 import styled from "styled-components";
-import Sidebar from "../components/Sidebar"; // Import the shared sidebar
-// import { Chatbot } from '@anugrah17/rag-chatbot-widget';
-// import '@anugrah17/rag-chatbot-widget/chatbot-widget.css'; // ✅ Now valid
-
+import Sidebar from "../components/Sidebar";
+import { Link } from "react-router-dom";
 
 const HomeContainer = styled.div`
   display: flex;
   align-items: flex-start;
   min-height: 100vh;
   padding: 40px;
-  background: linear-gradient(to right,rgb(255, 255, 255), #a1c4fd);
+  background: linear-gradient(to right, rgb(255, 255, 255), #a1c4fd);
   animation: fadeIn 0.6s ease-in-out;
 `;
 
@@ -36,14 +33,16 @@ const Description = styled.p`
   color: #666;
 `;
 
-const Links = styled.div`
+const StyledLinks = styled.div`
   margin-top: 20px;
   font-size: 14px;
+
   a {
     color: #007bff;
     text-decoration: none;
     margin-right: 10px;
   }
+
   a:hover {
     text-decoration: underline;
   }
@@ -55,17 +54,23 @@ function Home() {
       <Sidebar />
       <Content>
         <Title>ABOUT THIS SITE</Title>
-        <p>A sleek, responsive React app crafted with modern JavaScript for a seamless and engaging user experience.</p>
+        <p>
+          A sleek, responsive React app crafted with modern JavaScript for a
+          seamless and engaging user experience.
+        </p>
         <Description>
-          Welcome to my website. Please feel free to read more <a href="#">about me</a>, or check out my 
-          <a href="#"> resume</a>, <a href="#">projects</a>, view <a href="#">site statistics</a>, or 
-          <a href="#"> contact me</a>.
+          Welcome to my website. Please feel free to read more{" "}
+          <Link to="/about">about me</Link>, or check out my{" "}
+          <Link to="/resume">resume</Link>, <Link to="/projects">projects</Link>, view{" "}
+          <Link to="/stats">site statistics</Link>, or{" "}
+          <Link to="/contact">contact me</Link>.
         </Description>
-        <Links>
-          <p>Source available <a href="#">here</a>.</p>
-        </Links>
+        <StyledLinks>
+          <p>
+            Source available <a href="https://github.com/your-repo" target="_blank" rel="noopener noreferrer">here</a>.
+          </p>
+        </StyledLinks>
       </Content>
-      {/* <Chatbot /> */}
     </HomeContainer>
   );
 }

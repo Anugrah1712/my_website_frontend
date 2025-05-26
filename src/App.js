@@ -9,11 +9,9 @@ import Stats from './pages/Stats';
 import Contact from "./pages/Contact";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-
-// Import your Chatbot and DeveloperConsole components
-import { Chatbot } from 'rag-chatbot-ui-anuweb';// Import from npm package
-
 import "./App.css";
+import { Chatbot } from 'rag-chatbot-ui-anuweb';
+
 
 function App() {
   return (
@@ -27,8 +25,8 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/stats" element={<Stats />} />
       </Routes>
+      <Chatbot/>
       <Footer />  
-      <Chatbot />
     </Router>
   );
 }
